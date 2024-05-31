@@ -1,6 +1,6 @@
 {
   "Name": "<b><i>ТДМ</i></b>",
-  "Description": "<b><i>БИТВА ДВУХ КОМАНД</i>",
+  "Description": "<b><i>БИТВА ДВУХ КОМАНД</i></b>",
   "StartClientVersion": 334,
   "MapFilter": {
     "IsBlank": false,
