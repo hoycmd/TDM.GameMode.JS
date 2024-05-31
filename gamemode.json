@@ -24,7 +24,7 @@
       },
       {
         "Name": "OnlyKnives",
-        "DisplayName": "GmParams/OnlyKnives"
+        "DisplayName": "<b><i>Только оружие ближнего боя</i></b>"
       },
       {
         "Name": "PartialDesruction",
@@ -36,7 +36,7 @@
       },
       {
         "Name": "FriendlyFire",
-        "DisplayName": "GmParams/FriendlyFire"
+        "DisplayName": "<b><i>Огонь по своим</i></b>"
       }
     ]
   }
