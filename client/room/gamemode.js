@@ -3,24 +3,16 @@ import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, B
 import * as teams from './default_teams.js';
 
 // Констант€
-const WaitingPlayersTime = 10;
-const BuildBaseTime = 30;
-const KnivesModeTime = 40;
-const GameModeTime = 300;
-const MockModeTime = 20;
-const EndOfMatchTime = 8;
-const VoteTime = 20;
-const maxDeaths = Players.MaxCount * 5;
+var WaitingPlayersTime = 10;
+var BuildBaseTime = 1;
+var GameModeTime = 0;
+var EndOfMatchTime = 10;
 
 // К€нстант€ имен
-const WaitingStateValue = "Waiting";
-const BuildModeStateValue = "BuildMode";
-const KnivesModeStateValue = "KnivesMode";
-const GameStateValue = "Game";
-const MockModeStateValue = "MockMode";
-const EndOfMatchStateValue = "EndOfMatch";
-const immortalityTimerName = "immortality"; // имя таймера, используемого в контексте игрока, для его бессмертия
-
+var WaitingStateValue = "Waiting";
+var BuildModeStateValue = "BuildMode";
+var GameStateValue = "Game";
+var EndOfMatchStateValue = "EndOfMatch";
 
 // Посто€нные переменн€
 const mainTimer = Timers.GetContext().Get("Main");
@@ -154,7 +146,7 @@ SetWaitingMode();
 // с€сто€ния€ игр€
 function SetWaitingMode() {
 	stateProp.Value = WaitingStateValue;
-	Ui.GetContext().Hint.Value = "Ожидание игроков...";
+	Ui.GetContext().Hint.Value = "Hint/WaitingPlayers";
 	Spawns.GetContext().enable = false;
 	mainTimer.Restart(WaitingPlayersTime);
 }
@@ -162,7 +154,7 @@ function SetWaitingMode() {
 function SetBuildMode() 
 {
 	stateProp.Value = BuildModeStateValue;
-	Ui.GetContext().Hint.Value = "Застравайте базу";
+	Ui.GetContext().Hint.Value = "Hint/BuildBase";
 	var inventory = Inventory.GetContext();
 	inventory.Main.Value = true;
 	inventory.Secondary.Value = true;
@@ -177,10 +169,10 @@ function SetBuildMode()
 function SetGameMode() 
 {
 	stateProp.Value = GameStateValue;
-	Ui.GetContext().Hint.Value = "Атакуйте врага!";
+	Ui.GetContext().Hint.Value = "Hint/AttackEnemies";
 
 	var inventory = Inventory.GetContext();
-	if (GameMode.Parameters.GetBool("")) {
+	if (GameMode.Parameters.GetBool("OnlyKnives")) {
 		inventory.Main.Value = true;
 		inventory.Secondary.Value = true;
 		inventory.Melee.Value = true;
