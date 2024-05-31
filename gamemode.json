@@ -28,11 +28,11 @@
       },
       {
         "Name": "PartialDesruction",
-        "DisplayName": "GmParams/PartialDesruction"
+        "DisplayName": "<b><i>Частичное разрушение</i></b>"
       },
       {
         "Name": "LoosenBlocks",
-        "DisplayName": "GmParams/LoosenBlocks"
+        "DisplayName": "<b><i>Слабые блоки</i></b>"
       },
       {
         "Name": "FriendlyFire",
