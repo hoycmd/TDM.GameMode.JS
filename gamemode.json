@@ -19,24 +19,28 @@
     "Bool": [
       {
         "Name": "MapRotation",
-        "DisplayName": "GmParams/MapRotation",
+        "DisplayName": "<b><i>Смена карт</i></b>",
         "Default": true
       },
       {
         "Name": "OnlyKnives",
-        "DisplayName": "<b><i>Только оружие ближнего боя</i></b>"
+        "DisplayName": "<b><i>Только оружие ближнего боя</i></b>",
+        "Default": false
       },
       {
         "Name": "PartialDesruction",
-        "DisplayName": "<b><i>Частичное разрушение</i></b>"
+        "DisplayName": "<b><i>Частичное разрушение</i></b>",
+        "Default": true
       },
       {
         "Name": "LoosenBlocks",
-        "DisplayName": "<b><i>Слабые блоки</i></b>"
+        "DisplayName": "<b><i>Слабые блоки</i></b>",
+        "Default": false
       },
       {
         "Name": "FriendlyFire",
-        "DisplayName": "<b><i>Огонь по своим</i></b>"
+        "DisplayName": "<b><i>Огонь по своим</i></b>",
+        "Default": false
       }
     ]
   }
